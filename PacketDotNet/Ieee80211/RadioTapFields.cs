@@ -395,7 +395,7 @@ namespace PacketDotNet.Ieee80211
         public RateRadioTapField(BinaryReader br)
         {
             var u8 = br.ReadByte();
-            RateMbps = 0.5 * (u8 & 0x7f);
+            RateMbps = 0.5 * (u8 & 0xff);
         }
 
         /// <summary>
